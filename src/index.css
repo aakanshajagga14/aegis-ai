@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-background text-white antialiased overflow-hidden;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+.benefit-gradient-user {
+  background-color: #27AE60;
+}
+
+.benefit-gradient-company {
+  background-color: #C0392B;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-white text-black font-bold uppercase tracking-widest transition-all duration-300 hover:bg-white/90 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+}
