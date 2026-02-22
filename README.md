@@ -4,8 +4,6 @@
 
 Consent Layer translates complex privacy policies and terms of service into clear, human-readable consent signals — showing users what they give up, what's unclear, and who benefits more from the agreement.
 
-Built for the **AI for Social Good** hackathon track.
-
 ![Consent Layer Demo](./demo-preview.png)
 
 ---
