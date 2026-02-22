@@ -1,21 +1,144 @@
-<<<<<<< HEAD
-# React + Vite
+# Consent Layer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **"This is what you actually agreed to."**
 
-Currently, two official plugins are available:
+Consent Layer translates complex privacy policies and terms of service into clear, human-readable consent signals — showing users what they give up, what's unclear, and who benefits more from the agreement.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Built for the **AI for Social Good** hackathon track.
 
-## React Compiler
+![Consent Layer Demo](./demo-preview.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## What It Does
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# aegis-ai
-Digital consent is still consent
->>>>>>> 0f998b712b89b311f54e673e1a68252d69a60ee6
+Most people click "I Agree" without reading a word. Platforms design it that way. Consent Layer breaks that pattern by analyzing any privacy policy and surfacing three signals instantly:
+
+- 🔴 **What You Lose** — data collection, third-party sharing, broad permissions
+- 🟡 **What's Unclear** — vague language, undefined parties, buried opt-outs
+- 🟢 **What's Safe** — explicit user rights, opt-out mechanisms, transparency commitments
+
+Plus a **Benefit Balance Indicator** — a visual score showing who the agreement actually favors.
+
+---
+
+## Demo
+
+The app ships with a fully working demo using a fictional platform called **Vela Social** — no API keys, no setup, works offline.
+
+Click **"Analyze Consent"** and watch the full analysis cascade in real time.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | React + Vite |
+| Styling | Tailwind CSS (custom config) |
+| Animations | Framer Motion |
+| AI Layer | Simulated — hardcoded structured demo data |
+| Fonts | Space Grotesk (Google Fonts) |
+
+---
+
+## Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/consent-layer.git
+cd consent-layer
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+```
+
+Open `http://localhost:5173` — that's it. No `.env` file, no API keys, no accounts.
+
+---
+
+## Project Structure
+
+```
+consent-layer/
+├── src/
+│   ├── components/
+│   │   ├── AnalyzeButton.jsx       # Charged CTA with loading state
+│   │   ├── BenefitBar.jsx          # Animated user vs company balance bar
+│   │   ├── ConsentPanel.jsx        # Main results panel
+│   │   ├── RedFlagBlock.jsx        # Crimson callout for exact policy quotes
+│   │   ├── ResultCategory.jsx      # Staggered reveal for each signal category
+│   │   └── ScanningOverlay.jsx     # Fake real-time status messages
+│   ├── data/
+│   │   └── velaDemo.js             # Hardcoded demo policy + analysis result
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+├── index.html
+└── package.json
+```
+
+---
+
+## How the Demo Flow Works
+
+When you click **Analyze Consent**, a carefully timed sequence plays out:
+
+1. **Scanning phase (1.5s)** — status messages cycle through fake processing steps, CLI-style
+2. **Results cascade** — each category reveals line by line, 300ms stagger
+3. **Red flag callouts** — exact policy quotes surface with a crimson left border
+4. **Balance bar** — animates outward from center, landing on the final score
+
+Total flow: **6–8 seconds**. Designed for live demos and presentations.
+
+---
+
+## The Benefit Balance Bar
+
+The most unique feature. Not a moral judgment — just transparency.
+
+```
+You  [███░░░░░░░░░░░░░░░░░░░]  Platform
+      28%                72%
+```
+
+Calculated from volume of data collected, scope of permissions granted, and degree of user control retained. Animates on reveal.
+
+---
+
+## Design Decisions
+
+This UI was built to **not look AI-generated**. Specific choices made:
+
+- No default Tailwind palette — custom near-monochrome base with three intentional accent colors
+- No glassmorphism, gradients, or floating blobs
+- Space Grotesk over the generic Inter/Roboto default
+- Editorial layout — left input panel, right live results — feels like a terminal meets a legal brief
+- Red flag quotes rendered in monospace, like pulled evidence, not UI cards
+
+---
+
+## What's Next
+
+- **Real Claude API integration** — live analysis of any policy URL
+- **Chrome Extension** — analyze any site with one click
+- **Policy Change Tracking** — historical diffs when ToS updates
+- **Accessibility Mode** — simplified language for non-technical users
+- **Parental Consent View** — child-safe summaries for younger users
+
+---
+
+## Why This Matters
+
+The average person has agreed to thousands of privacy policies they've never read. Platforms make them long and opaque on purpose — obscurity is a feature, not a bug.
+
+Consent Layer is built on one idea: **transparency should be the default**. Every person who clicks "I Agree" deserves to know what that actually means for their data, their rights, and their digital footprint.
+
+---
+
+## License
+
+MIT — because consent should be mutual.
