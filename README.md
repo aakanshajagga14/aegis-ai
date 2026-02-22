@@ -44,7 +44,7 @@ Click **"Analyze Consent"** and watch the full analysis cascade in real time.
 
 ```bash
 # Clone the repo
-git clone [https://github.com/your-username/consent-layer.git](https://github.com/aakanshajagga14/aegis-ai)
+git clone https://github.com/your-username/consent-layer.git
 cd consent-layer
 
 # Install dependencies
