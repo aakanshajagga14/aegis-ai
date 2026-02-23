@@ -107,18 +107,6 @@ Calculated from volume of data collected, scope of permissions granted, and degr
 
 ---
 
-## Design Decisions
-
-This UI was built to **not look AI-generated**. Specific choices made:
-
-- No default Tailwind palette — custom near-monochrome base with three intentional accent colors
-- No glassmorphism, gradients, or floating blobs
-- Space Grotesk over the generic Inter/Roboto default
-- Editorial layout — left input panel, right live results — feels like a terminal meets a legal brief
-- Red flag quotes rendered in monospace, like pulled evidence, not UI cards
-
----
-
 ## What's Next
 
 - **Real Claude API integration** — live analysis of any policy URL
