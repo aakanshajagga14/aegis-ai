@@ -57,4 +57,3 @@
 3. Build the "Demo Page" background (simple, dark, "Vela" platform).
 4. Build the "Extension UI" floating panel.
 5. Implement the state machine for the scanning/results flow.
-6. Refine animations to ensure the 6-8s total timing.
