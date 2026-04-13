@@ -123,8 +123,3 @@ The average person has agreed to thousands of privacy policies they've never rea
 
 Consent Layer is built on one idea: **transparency should be the default**. Every person who clicks "I Agree" deserves to know what that actually means for their data, their rights, and their digital footprint.
 
----
-
-## License
-
-MIT — because consent should be mutual.
